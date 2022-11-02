@@ -121,7 +121,7 @@ def checkKeyExist(A_bagPath, target, key): # does the input key already exist in
 # 5: .bagFile Found, .json Found, Existing Key Found, Existing Key is null; auto overwritten irrelevent of Force modifier.
 
 def main(A_bagPath, bagName, target, key, value, modifier):
-    
+   
     try:
         os.chdir(A_bagPath) 
     except FileNotFoundError as e: 

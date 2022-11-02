@@ -4,7 +4,7 @@
 # USAGE EXAMPLE ./fileSort .(here) ../extractedBags
 #============================================================================
 
-cropArray=("Carrot" "Lavender" "Sugarbeet" "Lettuce" "Rape")
+cropArray=("Celery" "Springwheat") #"Wheat" "Barley" "Springbean" "Sugarbeet" "Lettuce" "OilseedRape" "Rape" "Onion" "Brocolli" "Carrot" "Choy" "Fennel" "Lavender" "Leek" "Spinach" "Cabbage")
 locationArray=("Pearce" "Lincoln")
 formatArray=("_RGB_" "_RGBD_" "_IRD_" "_RGBIRD_")
 
@@ -39,13 +39,17 @@ echo ""
 echo "===============================#      LOCATION SORT     #================================"
 
 for d in */ ; do # List all Directories in the Crop Directory Directory
-    cd $d
-    echo "Directory $d"
-    A_WHERE_SEARCH_NEW=$A_WHERE_SEARCH/organised/$d # Update these new locations to be a directory deeper #HAVE TO CALL IT NEW VARIABLE BECAUSE EACH TIME IT RUNS
+    cd $d # Go to each directory
+    echo "Directory $d" #print directory
+    A_WHERE_SEARCH_NEW=$A_WHERE_PUT/$d # Update these new locations to be a directory deeper #HAVE TO CALL IT NEW VARIABLE BECAUSE EACH TIME IT RUNS
     A_WHERE_PUT_NEW=$A_WHERE_PUT/$d # Update these new locations to be a directory deeper                 #THROUGH THE LOOPS ID JUST ADDS /$d ONTO THE END OF ITSELF
+
     for location in ${locationArray[@]}; do
-    $A_PROGRAM_HOME/net.sh $A_WHERE_SEARCH_NEW $location $A_WHERE_PUT_NEW # Organises all files into Location Directories within Crop Directories
+      echo "Directory $location"
+
+      $A_PROGRAM_HOME/net.sh $A_WHERE_SEARCH_NEW $location $A_WHERE_PUT_NEW # Organises all files into Location Directories within Crop Directories
     done
+    echo ""
     cd ~-
 done
 echo "===========================#      LOCATION SORT COMPLETE     #==========================="

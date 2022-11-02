@@ -26,7 +26,7 @@ cd $A_WHERE_PUT
 if [ -d ${KEYWORD^} ]; then # Is there already a directory with target name there? # If Yes
     echo "Successfully Located Existing Directory:" ${KEYWORD^} # Inform The User
 else # No  
-    echo "Cannot Locate Existing Directory" ${KEYWORD^} # Inform The User
+    echo "Cannot Locate Existing Directory ${KEYWORD^} in $A_WHERE_PUT" # Inform The User
     cd $A_WHERE_PUT
     mkdir ${KEYWORD^} # Make New Directory
     echo ${KEYWORD^} "Directory Created in: " $A_WHERE_PUT
