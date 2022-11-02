@@ -4,7 +4,7 @@
 # USAGE EXAMPLE ./fileSort .(here) ../extractedBags
 #============================================================================
 
-cropArray=("Celery" "Springwheat") #"Wheat" "Barley" "Springbean" "Sugarbeet" "Lettuce" "OilseedRape" "Rape" "Onion" "Brocolli" "Carrot" "Choy" "Fennel" "Lavender" "Leek" "Spinach" "Cabbage")
+cropArray=("Celery" "Springwheat" "Wheat" "Barley" "Springbean" "Sugarbeet" "Lettuce" "OilseedRape" "Rape" "Onion" "Brocolli" "Carrot" "Choy" "Fennel" "Lavender" "Leek" "Spinach" "Cabbage")
 locationArray=("Pearce" "Lincoln")
 formatArray=("_RGB_" "_RGBD_" "_IRD_" "_RGBIRD_")
 
